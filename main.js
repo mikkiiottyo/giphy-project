@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded" , init);
 function init() {
     document.getElementById("btnSearch").addEventListener("click", ev => {
         ev.preventDefault();
+        let loader = document.querySelector(".loader");
         let limit = 10;
         let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=${limit}&q=`;
         let str = document.getElementById("search").value.trim();
@@ -12,9 +13,14 @@ function init() {
         }
         url = url.concat(str);
         console.log(url);
+
+        loader.style.display = "block";
+        out.innerHTML = "";
+
         fetch(url)
         .then(response => response.json() )
         .then(content => {
+            loader.style.display = "none";
             console.log(content.data)
             console.log('META' , content.meta);
 
