@@ -21,7 +21,9 @@ function init() {
             let out = document.querySelector(".out");
             out.innerHTML = "";
 
-            content.data.forEach(gif => {
+           if (content.data.lenght > 0) {
+            let gifs = content,data,sort(() => Math.random() -0.5).slice(0, 3);
+            gifs.forEach(gif => {
             let fig = document.createElement('figure');
             let img = document.createElement('img');
             let fc = document.createElement('figcaption');
@@ -34,6 +36,9 @@ function init() {
             fig.appendChild(fc);
             out.appendChild(fig);
             });
+           } else {
+            out.innerHTML = "No results found!";
+           }
             document.querySelector("#search").value = "";
         })
         .catch(err => {
