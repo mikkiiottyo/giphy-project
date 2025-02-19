@@ -21,7 +21,7 @@ function init() {
             let out = document.querySelector(".out");
             out.innerHTML = "";
 
-           if (content.data.lenght > 0) {
+           if (content.data.length > 0) {
             let gifs = content.data.sort(() => Math.random() -0.5).slice(0, 3);
             gifs.forEach(gif => {
             let fig = document.createElement('figure');
