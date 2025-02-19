@@ -5,11 +5,13 @@ function init() {
     document.getElementById("btnSearch").addEventListener("click", ev => {
         ev.preventDefault();
         let loader = document.querySelector(".loader");
+        let out = document.querySelector(".out");
         let limit = 10;
         let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=${limit}&q=`;
         let str = document.getElementById("search").value.trim();
         if (!str) {
             alert("please enter a search term!");
+            return
         }
         url = url.concat(str);
         console.log(url);
@@ -24,7 +26,7 @@ function init() {
             console.log(content.data)
             console.log('META' , content.meta);
 
-            let out = document.querySelector(".out");
+            
             out.innerHTML = "";
 
            if (content.data.length > 0) {
