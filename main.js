@@ -6,6 +6,9 @@ function init() {
         ev.preventDefault();
         let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`;
         let str = document.getElementById("search").value.trim();
+        if (!str) {
+            alert("please enter a search term!");
+        }
         url = url.concat(str);
         console.log(url);
         fetch(url)
