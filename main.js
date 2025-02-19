@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded" , init);
 function init() {
     document.getElementById("btnSearch").addEventListener("click", ev => {
         ev.preventDefault();
-        let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`;
+        let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=3&q=`;
         let str = document.getElementById("search").value.trim();
         if (!str) {
             alert("please enter a search term!");
@@ -16,16 +16,23 @@ function init() {
         .then(content => {
             console.log(content.data)
             console.log('META' , content.meta);
+
+            let out = document.querySelector(".out");
+            out.innerHTML = "";
+
+            content.data.forEach(gif => {
             let fig = document.createElement('figure');
             let img = document.createElement('img');
             let fc = document.createElement('figcaption');
-            img.src = content.data[0].images.downsized.url;
-            img.alt = content.data[0].title;
-            fc.textContent = content.data[0].title;
+
+            img.src = gif.images.downsized.url;
+            img.alt = gif.title;
+            fc.textContent = gif.title;
+            
             fig.appendChild(img);
             fig.appendChild(fc);
-            let out = document.querySelector(".out");
-            out.insertAdjacentElement("afterbegin" , fig);
+            out.appendChild(fig);
+            })
             document.querySelector("#search").value = "";
         })
         .catch(err => {
