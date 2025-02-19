@@ -2,9 +2,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    font-family: 'chewy , serif'
 }
 
 body {
     background-color: #151d2f;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #13fc97;
 }
