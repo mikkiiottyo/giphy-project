@@ -22,7 +22,7 @@ function init() {
             out.innerHTML = "";
 
            if (content.data.lenght > 0) {
-            let gifs = content,data,sort(() => Math.random() -0.5).slice(0, 3);
+            let gifs = content.data.sort(() => Math.random() -0.5).slice(0, 3);
             gifs.forEach(gif => {
             let fig = document.createElement('figure');
             let img = document.createElement('img');
