@@ -13,6 +13,15 @@ function init() {
         .then(content => {
             console.log(content.data)
             console.log('META' , content.meta);
+            let fig = document.createElement('figure');
+            let img = document.createElement('img');
+            let fc = document.createElement('figcaption');
+            img.src = content.data[0].images.downsized.url;
+            img.alt = content.data[0].title;
+            fc.textContent = content.data[0].title;
+            fig.appendChild(img);
+            fig.appendChild(fc);
+            
         })
         .catch(err => {
             console.log(err);
