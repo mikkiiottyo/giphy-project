@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'chewy , serif'
+    font-family: 'Chewy' , serif;
 }
 
 body {
@@ -13,4 +13,16 @@ button {
     outline: none;
     cursor: pointer;
     background-color: #13fc97;
+    color: #151d2f;
+    border-radius: 0.5em;
+    font-weight: 500;
+}
+.search-container {
+    display: flex;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+    width: 100%;
+    max-width: 50em;
+    margin:  1em auto;
+    padding: 0.5em;
 }
