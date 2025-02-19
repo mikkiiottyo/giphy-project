@@ -21,7 +21,9 @@ function init() {
             fc.textContent = content.data[0].title;
             fig.appendChild(img);
             fig.appendChild(fc);
-            
+            let out = doucment.querySelector(".out");
+            out.insertAdjacentElement("afterbegin" , fig);
+            document.querySelector("#search").value = "";
         })
         .catch(err => {
             console.log(err);
