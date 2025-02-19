@@ -6,7 +6,7 @@ function init() {
         ev.preventDefault();
         let loader = document.querySelector(".loader");
         let out = document.querySelector(".out");
-        let limit = 10;
+        let limit = 20;
         let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=${limit}&q=`;
         let str = document.getElementById("search").value.trim();
         if (!str) {
