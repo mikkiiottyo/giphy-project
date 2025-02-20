@@ -32,17 +32,26 @@ function init() {
            if (content.data.length > 0) {
             let gifs = content.data.sort(() => Math.random() -0.5).slice(0, 6);
             gifs.forEach(gif => {
-            let fig = document.createElement('figure');
-            let img = document.createElement('img');
-            let fc = document.createElement('figcaption');
+            let colDiv = document.createElement('figure');
+            colDiv.className = "col-6 col-md-4 col-lg-3 d-flex flex-colum align-items-center"
 
+            let fig = document.createElement('figure');
+            fig.className = "text-center";
+
+            let img = document.createElement('img');
             img.src = gif.images.downsized.url;
             img.alt = gif.title;
+            img.className = "img-fluid rounded";
+
+            let fc = document.createElement('figcaption');
             fc.textContent = gif.title;
+            fc.className = "text-light mt-2";
+            
             
             fig.appendChild(img);
             fig.appendChild(fc);
-            out.appendChild(fig);
+            colDiv.appendChild(fig);
+            out.appendChild(colDiv);
             });
            } else {
             out.innerHTML = "No results found!";
@@ -51,6 +60,6 @@ function init() {
         })
         .catch(err => {
             console.log(err);
-        })
+        });
     });
 }
