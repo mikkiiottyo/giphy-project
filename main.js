@@ -33,7 +33,7 @@ function init() {
             let gifs = content.data.sort(() => Math.random() -0.5).slice(0, 6);
             gifs.forEach(gif => {
             let colDiv = document.createElement('figure');
-            colDiv.className = "col-4 d-flex flex-column align-items-center";
+            colDiv.className = "gif-container";
 
             let fig = document.createElement('figure');
             fig.className = "text-center";
