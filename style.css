@@ -7,6 +7,13 @@
 body {
     background-color: #151d2f;
 }
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151d2f;
+    padding: 10px 20px;
+}
 .search-form {
     display: flex;
     justify-content: center;
