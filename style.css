@@ -44,7 +44,12 @@ button {
 
 }
 .wrapper {
-
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    max-width: 960px;
+    margin: auto; 
 }
 .loader {
     display: none;
@@ -59,7 +64,13 @@ button {
     top: 50%;
     animation: spin 3s infinite;
 }
-
+.out img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 @keyframes spin {
     100% {
         transform: translate(-50%, -50%) rotate(360deg);

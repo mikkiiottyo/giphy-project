@@ -41,7 +41,7 @@ function init() {
             let img = document.createElement('img');
             img.src = gif.images.downsized.url;
             img.alt = gif.title;
-            img.className = "img-fluid rounded";
+            img.className = "fixed-gif";
 
             let fc = document.createElement('figcaption');
             fc.textContent = gif.title;
