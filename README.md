@@ -1,2 +1,3 @@
 # giphy-project
  giphy project
+This is my Giphy project that will allow you to search for gifs using Giphy API. This is a simple website that will allow you to search for any gif that is available from the Giphy API.This website also comes with an contact page, and an about page so the user can know more information if they want so.This website uses HTML, css ,and javascript to function the website. I want to be able to improve on my design skills, ways to make a website more interactive, and lastly i want to figure out a way to be able to copy a link to each gif for easy access to download it for the users.
