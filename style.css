@@ -7,6 +7,15 @@
 body {
     background-color: #151d2f;
 }
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 50em;
+    margin: 1em auto;
+    padding: 0.5em;
+}
 button {
     border: none;
     outline: none;

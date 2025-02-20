@@ -10,15 +10,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 <!--css link-->
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
+    <nav class="header-nav">
+        <div class="logo-text">Giphy Finder</div>
+        <ul class="header-nav-menu">
+            <li class="header-menu-item"><a href="about.html">About</a></li>
+            <li class="header-menu-item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 <div class="wrapper container py-4">
     <main>
         
         <div class="search-container row justify-content-center">
-            <form class="col-12 col-md-8 d-flex gap-2">
+            <form class="search-form">
                 <label for="search" class="form-label d-none">Search</label>
                 <input id="search" type="search" class="form-control" placeholder="Search for GIFs">
                 <button id="btnSearch" class="btn">Submit</button>
