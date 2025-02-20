@@ -16,16 +16,10 @@ body {
     margin: 1em auto;
     padding: 0.5em;
 }
-button {
+#btnSearch {
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #13fc97;
-    color: #151d2f;
-    border-radius: .5em;
-    font-weight: 500;
-}
-#btnSearch {
     background-color: #13fc97;
     color: #151d2f; 
     border: none;
@@ -53,7 +47,7 @@ button {
 
 }
 .wrapper {
-    display: flex;
+    display: grid;
     gap: 10px; 
     justify-content: center;
     max-width: 960px;
